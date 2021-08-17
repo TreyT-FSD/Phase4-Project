@@ -1,0 +1,25 @@
+{
+    "customer": [
+        {
+          "id": 1001,
+          "username": "Tim",
+          "password": "123",
+          "email": "Timmy@Hortons.com"
+        }
+    ],
+    "admin": [
+        {
+            "id":1,
+            "username":"admin",
+            "password":"admin"
+        }
+    ],
+    "product":[
+        {
+            "id":1,
+            "name":"",
+            "Description":"",
+            "price":0
+        }
+    ]
+}
