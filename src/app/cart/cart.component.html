@@ -1,0 +1,21 @@
+<h3>Shopping Cart</h3>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Remove?</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of cart">
+            <td>{{product.id}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.price}}</td>
+            <td>REMOVE BUTTON</td>
+        </tr>
+    </tbody>
+
+</table>

@@ -9,7 +9,6 @@
     ],
     "admin": [
         {
-            "id":1,
             "username":"admin",
             "password":"admin"
         }
@@ -17,9 +16,24 @@
     "product":[
         {
             "id":1,
-            "name":"",
-            "Description":"",
-            "price":0
+            "name":"Apple",
+            "description":"An Apple",
+            "price":0.99,
+            "imgPath":"assets/Apple.png"
+        },
+        {
+            "id":2,
+            "name":"Bread",
+            "description":"A loaf of Bread",
+            "price":5.99,
+            "imgPath":"assets/Bread.png"
+        },
+        {
+            "id":3,
+            "name":"Eggs",
+            "description":"A dozen Eggs",
+            "price":6.99,
+            "imgPath":"assets/Eggs.png"
         }
     ]
 }
