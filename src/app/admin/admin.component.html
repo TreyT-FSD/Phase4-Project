@@ -1,2 +1,20 @@
-<p>admin works!</p>
-<button routerLink="" class="btn" (click)="logout()">Logout</button>
+<h3>Admin</h3>
+
+<p>Change Password</p>
+
+
+<form>
+    <!-- <div>
+        <input type="text" name="name" placeholder="User Name" class="form-control" [(ngModel)]="user.username" required>
+    </div> -->
+    <div>
+        <input type="text" name="password" placeholder="Password" class="form-control mb-1" [(ngModel)]="admin.password"
+            required>
+    </div>
+    <div>
+        <input type="submit" value="Change Password" (click)="changePassword()" class="btn btn-secondary">
+    </div>
+</form>
+<hr>
+<app-product></app-product>
+
