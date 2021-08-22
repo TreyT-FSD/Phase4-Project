@@ -32,6 +32,13 @@
   <hr>
   <p class="mb-1">Kitchen Story</p>
   <ul class="list-inline">
-    <li class="list-inline-item"><a routerLink="admin">Admin</a></li>
+    <li class="list-inline-item ">
+      <a routerLink="admin" class="text-reset text-decoration-none">&nbsp;&nbsp;Admin</a>
+    </li>
+    <li>
+      <div *ngIf="isLoggedIn()">
+        <button routerLink="" class="btn text-reset " (click)="logout()">Logout</button>
+      </div>
+    </li>
   </ul>
 </footer>
