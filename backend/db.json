@@ -1,40 +1,40 @@
 {
-    "customer": [
-        {
-          "id": 1001,
-          "username": "Tim",
-          "password": "123",
-          "email": "Timmy@Hortons.com"
-        }
-    ],
-    "admin": [
-        {
-            "id":1,
-            "username":"admin",
-            "password":"admin"
-        }
-    ],
-    "product":[
-        {
-            "id":1,
-            "name":"Apple",
-            "description":"An Apple",
-            "price":0.99,
-            "imgPath":"assets/Apple.png"
-        },
-        {
-            "id":2,
-            "name":"Bread",
-            "description":"A loaf of Bread",
-            "price":5.99,
-            "imgPath":"assets/Bread.png"
-        },
-        {
-            "id":3,
-            "name":"Eggs",
-            "description":"A dozen Eggs",
-            "price":6.99,
-            "imgPath":"assets/Eggs.png"
-        }
-    ]
+  "customer": [
+    {
+      "id": 1001,
+      "username": "Tim",
+      "password": "123",
+      "email": "Timmy@Hortons.com"
+    }
+  ],
+  "admin": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "123"
+    }
+  ],
+  "product": [
+    {
+      "id": 1,
+      "name": "Apple",
+      "description": "An Apple",
+      "price": 0.99,
+      "imgPath": "assets/Bread.png"
+    },
+    {
+      "id": 3,
+      "name": "cheese",
+      "description": "some cheese",
+      "price": 1.99,
+      "imgPath": "assets/Default.png"
+    },
+    {
+      "id": 4,
+      "name": "Eggs",
+      "description": "A dozen eggs",
+      "price": 4.99,
+      "imgPath": "assets/Default.png"
+    }
+  ]
 }
