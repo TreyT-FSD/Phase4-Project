@@ -14,4 +14,9 @@ export class AdminService {
     getAdmin(): Observable<Admin> {
         return this._http.get<Admin>(this.ADMIN_API_URL + "/admin/1");
     }
+
+    updatePassword(admin: Admin): Observable<Admin> {
+        return this._http.put<Admin>(this.ADMIN_API_URL + "/admin/" + admin.id, admin);
+    }
+
 }
