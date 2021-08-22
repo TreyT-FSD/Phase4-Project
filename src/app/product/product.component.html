@@ -5,9 +5,9 @@
         <tr>
             <th>Id</th>
             <th>Name</th>
-            <th>Price</th>
             <th>Description</th>
-            <th>Image Filename</th>
+            <th>Price</th>
+            <!-- <th>Image Filename</th> -->
             <th>Actions</th>
         </tr>
     </thead>
@@ -15,9 +15,9 @@
         <tr *ngFor="let product of products">
             <td>{{product.id}}</td>
             <td>{{product.name}}</td>
-            <td>{{product.price}}</td>
             <td>{{product.description}}</td>
-            <td>{{product.imgPath.split("/")[1]}}</td>
+            <td>{{product.price}}</td>
+            <!-- <td>{{product.imgPath.split("/")[1]}}</td> -->
             <td><a (click)="removeProduct(product.id)" class='btn btn-danger'>Delete</a></td>
         </tr>
     </tbody>
