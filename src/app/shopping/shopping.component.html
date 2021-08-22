@@ -1,3 +1,16 @@
+<h3>Product Search</h3>
+<form #psf="ngForm">
+    <div class="mb-3">
+        <label for="productSearch">Product Search</label>
+        <input type="text" id="productSearch" name="productSearch" class="form-control mb-3" required [(ngModel)]="searchTerm">
+        <input type="submit" (click)="filterProducts(searchTerm)" value="Search" class="btn btn-primary" [disabled]="psf.invalid"> |
+        <input type="reset" (click)="filterProducts('')" value="Clear Search" class="btn btn-danger">
+    </div>
+
+</form>
+
+<hr>
+
 <div class="card-group">
     <div *ngFor="let product of products">
         <div class="card" style="width: 18rem;">
