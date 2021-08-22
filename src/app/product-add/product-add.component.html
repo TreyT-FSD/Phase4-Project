@@ -1,0 +1,39 @@
+<h3>Add a New Product</h3>
+
+<form #pf="ngForm" (ngSubmit)="addProduct()">
+    <div class="mb-3" [hidden]="pf.submitted">
+
+        <label for="name">Product Name</label>
+        <input type="text" id="name" name="name" class="form-control mb-3" required [(ngModel)]="product.name"
+            #name="ngModel">
+        <div *ngIf="name.invalid && (name.dirty || name.touched)">
+            <div *ngIf="name.errors?.required">A product name is required</div>
+        </div>
+
+        <label for="description">Product Description</label>
+        <input type="text" id="description" name="description" class="form-control mb-3" required
+            [(ngModel)]="product.description" #description="ngModel">
+        <div *ngIf="description.invalid && (description.dirty || description.touched)">
+            <div *ngIf="description.errors?.required">A description is required</div>
+        </div>
+
+        <label for="price">Price</label>
+        <input type="number" id="price" name="price" class="form-control mb-3" required [(ngModel)]="product.price"
+            #price="ngModel">
+        <div *ngIf="price.invalid && (price.dirty || price.touched)">
+            <div *ngIf="price.errors?.required">A price is required</div>
+        </div>
+
+        <input type="submit" value="Add" class="btn btn-success" [disabled]="pf.invalid"> |
+        <input type="reset" value="Clear Fields" class="btn btn-danger"> |
+        <a class="btn btn-secondary" routerLink="/admin">Back</a>
+
+    </div>
+
+    <div class="submitted-message" *ngIf="pf.submitted">
+        <p>You've submited product: {{ pf.value.name }}</p>
+        <button (click)="pf.resetForm({})" class="btn btn-secondary">Add new product</button> | 
+        <a class="btn btn-secondary" routerLink="/admin">Back to Admin</a>
+    </div>
+
+</form>
