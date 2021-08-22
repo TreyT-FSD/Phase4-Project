@@ -28,13 +28,13 @@ export class AdminLoginComponent implements OnInit {
   login() {
     var isValidAdmin: boolean = false;
 
-    // console.log("user supplied creds");
-    // console.log(this.admin);
-
     if (this.validAdmin.username.toLowerCase() == this.admin.username.toLowerCase() &&
-        this.validAdmin.password == this.admin.password) {
+      this.validAdmin.password == this.admin.password) {
+
       sessionStorage.setItem("isAdmin", "true");
-      // console.log("admin login success");
+      sessionStorage.setItem("adminId", this.validAdmin.id.toString());
+      sessionStorage.setItem("adminUsername", this.validAdmin.username);
+
       this._router.navigate(["admin"]);
 
     } else {
