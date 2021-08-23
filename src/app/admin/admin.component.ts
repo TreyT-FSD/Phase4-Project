@@ -30,7 +30,7 @@ export class AdminComponent implements OnInit {
     this._adminSvc.updatePassword(this.admin)
       .subscribe(
         (result) => {
-          console.log("Admin password updated");
+          //console.log("Admin password updated");
         },
         (error) => {
           console.log(error);

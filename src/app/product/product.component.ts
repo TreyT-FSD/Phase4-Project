@@ -25,11 +25,11 @@ export class ProductComponent implements OnInit {
   }
 
   removeProduct(id: number): void {
-    console.log("Deleting product");
+    //console.log("Deleting product");
     this._productSvc.removeProductById(id)
       .subscribe(
         (result) => {
-          console.log("Product deleted");
+          //console.log("Product deleted");
           this.ngOnInit();
         },
         (error) => {

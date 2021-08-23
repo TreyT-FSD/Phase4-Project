@@ -24,7 +24,7 @@ export class ProductAddComponent implements OnInit {
     
     this._productSvc.addProduct(this.product).subscribe(
       (result)=>{
-        console.log(result);
+        //console.log(result);
       },
       (error)=>{
         console.log(error);

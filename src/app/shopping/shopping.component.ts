@@ -46,7 +46,7 @@ export class ShoppingComponent implements OnInit {
     //console.log(id);
     this._productSvc.getProductById(id).subscribe(
       result => {
-        console.log(result);
+        // console.log(result);
         this.cart.push(result);
         sessionStorage.setItem("cart", JSON.stringify(this.cart));
       },
