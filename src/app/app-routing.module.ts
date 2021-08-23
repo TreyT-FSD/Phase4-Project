@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { AdminComponent } from './admin/admin.component';
 import { CartComponent } from './cart/cart.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ProductAddComponent } from './product-add/product-add.component';
 import { ProductComponent } from './product/product.component';
@@ -13,6 +14,7 @@ const routes: Routes = [
   
   { path: 'shopping', component: ShoppingComponent},
   { path: 'cart', component: CartComponent},
+  { path: 'cart/checkout', component: CheckoutComponent},
   { path: 'admin', component: AdminComponent, canActivate:[AuthGaurd]},
   { path: 'admin-login', component: AdminLoginComponent},
   { path: 'admin/product-add', component: ProductAddComponent, canActivate:[AuthGaurd]},

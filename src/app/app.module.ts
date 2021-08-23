@@ -15,10 +15,11 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { AuthGaurd } from './services/auth-gaurd.service';
 import { AdminService } from './services/admin.service';
 import { ProductAddComponent } from './product-add/product-add.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 @NgModule({
   declarations: [    
-    MainComponent, PageNotFoundComponent, ProductComponent, ShoppingComponent, CartComponent, AdminComponent, AdminLoginComponent, ProductAddComponent
+    MainComponent, PageNotFoundComponent, ProductComponent, ShoppingComponent, CartComponent, AdminComponent, AdminLoginComponent, ProductAddComponent, CheckoutComponent
   ],
   imports: [
     BrowserModule,
