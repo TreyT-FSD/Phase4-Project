@@ -3,13 +3,17 @@
 <p>Change Password</p>
 
 
-<form>
+<form #pwf="ngForm">
     <!-- <div>
         <input type="text" name="name" placeholder="User Name" class="form-control" [(ngModel)]="user.username" required>
     </div> -->
     <div>
         <input type="text" name="password" placeholder="Password" class="form-control mb-1" [(ngModel)]="admin.password"
-            required>
+            required minlength="5" #password="ngModel">
+            <div *ngIf="password.invalid && (password.dirty || password.touched)">
+                <div *ngIf="password.errors?.required">Password cannot be blank</div>
+                <div *ngIf="password.errors?.minlength">Password must be atleast 5 characters</div>
+            </div>
     </div>
     <div>
         <input type="submit" value="Change Password" (click)="changePassword()" class="btn btn-secondary">
@@ -17,4 +21,5 @@
 </form>
 <hr>
 <app-product></app-product>
+
 
