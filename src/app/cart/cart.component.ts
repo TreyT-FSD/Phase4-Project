@@ -9,17 +9,15 @@ import { Product } from '../models/product';
 export class CartComponent implements OnInit {
 
   cart: Array<Product>;
-  total: number;
+  total: string;
 
   constructor() {
     let sessionCart = sessionStorage.getItem("cart");
-    this.total=0;
+    this.total = "";
 
     if (sessionCart != null) {
       this.cart = JSON.parse(sessionCart);
-      this.cart.forEach(cartItem =>{
-        this.total+=cartItem.price;
-      })
+      this.total = this.getCartTotal().toFixed(2);
     }
     else {
       this.cart = new Array<Product>();
@@ -27,18 +25,21 @@ export class CartComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    //get the current cart
   }
 
-  removeProduct(id:number): void {
-    let tempCart = new Array<Product>();
+  removeProduct(index: number): void {
+    this.cart.splice(index, 1);
+    this.total=this.getCartTotal().toFixed(2);
+    sessionStorage.setItem("cart", JSON.stringify(this.cart));
+  }
 
-    this.cart.forEach(element => {
-      if(element.id != id){
-        tempCart.push(element);
-      }
+  getCartTotal(): number {
+    let total = 0;
+    this.cart.forEach(cartItem => {
+      total += cartItem.price;
     });
-    this.cart=tempCart;
+    // total.toFixed(2);
+    return total;
   }
 
 }

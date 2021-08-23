@@ -9,7 +9,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let product of cart">
+        <tr *ngFor="let product of cart; let i = index">
             <table class="table table-borderless table-sm">
                 <thead></thead>
                 <tbody>
@@ -18,7 +18,7 @@
                 </tbody>
             </table>
             <td>${{product.price}}</td>
-            <td><a (click)="removeProduct(product.id)" class='btn btn-danger'>Delete</a></td>
+            <td><a (click)="removeProduct(i)" class='btn btn-danger'>Delete</a></td>
         </tr>
         
     </tbody>
