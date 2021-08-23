@@ -1,34 +1,43 @@
-<h3>Your Cart</h3>
+<div *ngIf="cart.length != 0">
+    <h3>Your Cart</h3>
 
-<table class="table table-borderless">
-    <thead>
-        <tr>
-            <th>Product</th>
-            <th>Price</th>
-            <th>Remove</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let product of cart; let i = index">
-            <table class="table table-borderless table-sm">
-                <thead></thead>
-                <tbody>
-                    <tr><td>{{product.name}}</td></tr>
-                    <tr><td><small>{{product.description}}</small></td></tr>
-                </tbody>
-            </table>
-            <td>${{product.price}}</td>
-            <td><a (click)="removeProduct(i)" class='btn btn-danger'>Delete</a></td>
-        </tr>
-        
-    </tbody>
-</table>
-<div class="d-flex justify-content-end">
-    <div class="p-2">Subtotal</div>
-    <div class="p-2">${{total}}</div>
-</div>
-<div class="d-flex justify-content-end">
-    <div class="p-2">
-        <input value="Checkout" routerLink="checkout" class="btn btn-primary">
+    <table class="table table-borderless">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of cart; let i = index">
+                <table class="table table-borderless table-sm">
+                    <thead></thead>
+                    <tbody>
+                        <tr>
+                            <td>{{product.name}}</td>
+                        </tr>
+                        <tr>
+                            <td><small>{{product.description}}</small></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <td>${{product.price}}</td>
+                <td><a (click)="removeProduct(i)" class='btn btn-danger'>Delete</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="d-flex justify-content-end">
+        <div class="p-2">Subtotal</div>
+        <div class="p-2">${{total}}</div>
     </div>
+    <div class="d-flex justify-content-end">
+        <div class="p-2">
+            <input value="Checkout" routerLink="checkout" class="btn btn-primary">
+        </div>
+    </div>
+</div>
+<div *ngIf="cart.length == 0">
+    <div class="text-center"><h3>Your cart is empty!</h3></div>
 </div>
