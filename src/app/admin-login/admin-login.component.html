@@ -12,9 +12,8 @@
 
     </div>
     <div class='mb-3'>
-        <input type="text" name="password" placeholder="Password" class="form-control" [(ngModel)]="admin.password" #password="ngModel"
+        <input type="password" name="password" placeholder="Password" class="form-control" [(ngModel)]="admin.password" #password="ngModel"
             required>
-        <!-- TODO: change type back to password-->
 
         <div *ngIf="password.invalid && (password.dirty || password.touched)">
             <div *ngIf="password.errors?.required">
