@@ -172,7 +172,7 @@
                     <input type="submit" value="Submit Payment" class="w-100 btn btn-primary btn-lg"
                         [disabled]="cf.invalid">
 
-                    
+
 
                 </form>
 
@@ -182,6 +182,35 @@
     <div class="submitted-message text-center" *ngIf="cf.submitted">
         <p>Hi, {{customer.firstName}}</p>
         <h3 class="mb-4">Thank you for your order!</h3>
-        <a class="btn btn-primary" routerLink="/">Continue Shopping</a>
+
+        <div class="row">
+            <div class="col-sm"></div>
+            <div class="col-sm">
+                <p>Order Summary</p>
+                <table class="table table-sm ">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let product of cart; let i = index">
+                            <td>{{product.name}}</td>
+                            <td>${{product.price}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="d-flex justify-content-end">
+                    <div class="p-2">Total</div>
+                    <div class="p-2">${{total}}</div>
+                </div>
+            </div>
+            <div class="col-sm"></div>
+          </div>
+
+          <a class="btn btn-primary mt-4" routerLink="/">Continue Shopping</a>
+
     </div>
+
 </main>
