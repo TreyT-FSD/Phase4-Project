@@ -1,12 +1,4 @@
 {
-  "customer": [
-    {
-      "id": 1001,
-      "username": "Tim",
-      "password": "123",
-      "email": "Timmy@Hortons.com"
-    }
-  ],
   "admin": [
     {
       "id": 1,
