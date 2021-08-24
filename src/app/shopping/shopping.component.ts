@@ -49,6 +49,7 @@ export class ShoppingComponent implements OnInit {
         // console.log(result);
         this.cart.push(result);
         sessionStorage.setItem("cart", JSON.stringify(this.cart));
+        alert(result.name + " was added to the cart.")
       },
       error => {
         console.log(error);
